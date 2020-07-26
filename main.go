@@ -1,5 +1,4 @@
 package main
-package io
 
 import (
     "bufio"
