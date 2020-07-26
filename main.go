@@ -20,8 +20,10 @@ func main() {
 	// read URLs on stdin, then replace the values in the query string
 	// with some user-provided value
 	sc := bufio.NewScanner(os.Stdin)
+	var i int = 0
 	for sc.Scan() {
 		u, err := url.Parse(sc.Text())
+		i = i + 1
 		if err != nil {
 			fmt.Fprintf(os.Stderr, "failed to parse url %s [%s]\n", sc.Text(), err)
 			continue
@@ -58,5 +60,6 @@ func main() {
 		fmt.Printf("%s\n", u)
 
 	}
+	fmt.Println(i)
 
 }
