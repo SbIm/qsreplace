@@ -4,7 +4,7 @@ import (
     "bufio"
     "flag"
     "fmt"
-    "errors"
+    "io"
     "net/url"
     "os"
     "sort"
