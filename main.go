@@ -23,6 +23,9 @@ func main() {
     // read URLs on stdin, then replace the values in the query string
     // with some user-provided value
     f, err := os.Open(inputFile)
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "failed to file [%s]\n", err)
+    }
     defer f.Close()
     rd := bufio.NewReader(f)
 //  sc := bufio.NewScanner(os.Stdin)
