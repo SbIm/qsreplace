@@ -31,6 +31,7 @@ func main() {
 //  sc := bufio.NewScanner(os.Stdin)
     for {
         line, err := rd.ReadString('\n')
+        line = strings.Replace(line, "\n", "", -1)  
         if err != nil || io.EOF == err {
             break
         }
