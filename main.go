@@ -1,9 +1,11 @@
 package main
+package io
 
 import (
     "bufio"
     "flag"
     "fmt"
+    "errors"
     "net/url"
     "os"
     "sort"
@@ -32,7 +34,7 @@ func main() {
         }
         u, err := url.Parse(line)
         if err != nil {
-            fmt.Fprintf(os.Stderr, "failed to parse url %s [%s]\n", sc.Text(), err)
+            fmt.Fprintf(os.Stderr, "failed to parse url %s [%s]\n", line, err)
             continue
         }
 
