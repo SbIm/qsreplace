@@ -12,6 +12,7 @@ import (
 
 func main() {
     var appendMode bool
+    var inputFile string
     flag.BoolVar(&appendMode, "a", false, "Append the value instead of replacing it")
     flag.StringVar(&inputFile, "i", "", "Input file")
     flag.Parse()
